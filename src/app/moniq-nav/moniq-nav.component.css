@@ -1,0 +1,50 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  border-right: 1px rgba(0,0,0,.06) solid;
+}
+
+.sidenav.mat-drawer {
+  background-color: rgba(0,0,0,.03);
+  color: rgba(0,0,0,.87);
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+}
+
+.mat-nav-list {
+  padding: 0;
+}
+
+.mat-nav-list .mat-icon {
+  padding: 0 8px 0 0;
+}
+
+.mat-nav-list .mat-list-item {
+  color: rgba(0,0,0,.87);
+  font-size: 13px;
+  height: 39px;
+  line-height: 39px;
+}
+
+h1 {
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 16px 16px 8px 16px;
+}
+
+h2 {
+  border-top: 1px rgba(0,0,0,.06) solid;
+  color: rgba(0,0,0,.5);
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 8px 0 0 0;
+  padding: 16px 16px 8px 16px;
+}
