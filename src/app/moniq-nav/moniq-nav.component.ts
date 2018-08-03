@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 @Component({
   selector: 'moniq-nav',
   templateUrl: './moniq-nav.component.html',
-  styleUrls: ['./moniq-nav.component.css']
+  styleUrls: ['./moniq-nav.component.scss']
 })
 export class MoniqNavComponent {
   items = [
