@@ -9,7 +9,28 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./moniq-nav.component.css']
 })
 export class MoniqNavComponent {
-
+  items = [
+    {
+      label: 'All',
+      icon: 'list',
+      href: '#'
+    },
+    {
+      label: 'Inbox',
+      icon: 'inbox',
+      href: '#'
+    },
+    {
+      label: 'Favorites',
+      icon: 'favorite_outline',
+      href: '#'
+    },
+    {
+      label: 'Trash',
+      icon: 'delete_outline',
+      href: '#'
+    },
+  ];
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
