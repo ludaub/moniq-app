@@ -4,11 +4,7 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class NavService {
-  constructor(private http: HttpClient) {
-    this.getItems().subscribe(data => {
-      console.log(data);
-    });
-  }
+  constructor(private http: HttpClient) {}
 
   public getItems(): Observable<any> {
     return this.http.get('./assets/data/nav.json');
