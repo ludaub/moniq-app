@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "label": "All",
+      "icon": "list",
+      "href": "#"
+    },
+    {
+      "label": "Inbox",
+      "icon": "inbox",
+      "href": "#"
+    },
+    {
+      "label": "Favorites",
+      "icon": "favorite_outline",
+      "href": "#"
+    },
+    {
+      "label": "Trash",
+      "icon": "delete_outline",
+      "href": "#"
+    }
+  ]
+}
