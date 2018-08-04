@@ -3,22 +3,22 @@
     {
       "label": "All",
       "icon": "list",
-      "href": "#"
+      "uri": "/collection/all"
     },
     {
       "label": "Inbox",
       "icon": "inbox",
-      "href": "#"
+      "uri": "/collection/inbox"
     },
     {
       "label": "Favorites",
       "icon": "favorite_outline",
-      "href": "#"
+      "uri": "/collection/fav"
     },
     {
       "label": "Trash",
       "icon": "delete_outline",
-      "href": "#"
+      "uri": "/collection/trash"
     }
   ]
 }

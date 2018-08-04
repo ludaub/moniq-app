@@ -7,7 +7,7 @@ import { NavService } from './nav.service';
 @Component({
   selector: 'mon-nav',
   templateUrl: 'nav.component.html',
-  styleUrls: ['nav.component.scss']
+  styleUrls: ['nav.component.sass']
 })
 export class NavComponent {
   private items: any[];
