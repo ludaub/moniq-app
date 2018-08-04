@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'mon-collection__viewer',
+  selector: 'mon-collection-viewer',
   templateUrl: 'collection-viewer.component.html',
   styleUrls: ['collection-viewer.component.sass']
 })
 export class CollectionViewerComponent {
   private id: String;
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
+  constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => 
