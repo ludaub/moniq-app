@@ -3,11 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { Collection } from './collection';
 
 @Component({
-  selector: 'mon-collection-viewer',
-  templateUrl: 'collection-viewer.component.html',
-  styleUrls: ['collection-viewer.component.sass']
+  selector: 'mon-collection',
+  templateUrl: 'collection.component.html',
+  styleUrls: ['collection.component.sass']
 })
-export class CollectionViewerComponent {
+export class CollectionComponent {
   private collection: Collection;
 
   constructor(private activatedRoute: ActivatedRoute) {}

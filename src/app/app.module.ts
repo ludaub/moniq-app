@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { AppRouterModule } from './app.router.module';
-import { CollectionViewerComponent } from './collection/collection-viewer.component';
+import { CollectionComponent } from './collection/collection.component';
 import { NavComponent } from './nav/nav.component';
 import { NavService } from './nav/nav.service';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -14,7 +14,7 @@ import { MatToolbarModule, MatButtonModule, MatCardModule, MatSidenavModule, Mat
 @NgModule({
   declarations: [
     AppComponent,
-    CollectionViewerComponent,
+    CollectionComponent,
     NavComponent,
   ],
   imports: [

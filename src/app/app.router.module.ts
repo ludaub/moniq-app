@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, Router } from '@angular/router';
 import { AppComponent } from './app.component';
-import { CollectionViewerComponent } from './collection/collection-viewer.component';
+import { CollectionComponent } from './collection/collection.component';
 
 const routes: Routes = [
   {
@@ -14,7 +14,7 @@ const routes: Routes = [
       },
       {
         path: ':id',
-        component: CollectionViewerComponent
+        component: CollectionComponent
       }
     ]
   }
