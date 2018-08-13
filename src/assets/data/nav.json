@@ -1,9 +1,9 @@
 {
   "items": [
     {
-      "label": "All",
-      "icon": "list",
-      "uri": "/collection/all"
+      "label": "Home",
+      "icon": "home_outline",
+      "uri": "/collection/home"
     },
     {
       "label": "Inbox",
@@ -11,12 +11,12 @@
       "uri": "/collection/inbox"
     },
     {
-      "label": "Favorites",
+      "label": "Liked",
       "icon": "favorite_outline",
-      "uri": "/collection/fav"
+      "uri": "/collection/liked"
     },
     {
-      "label": "Trash",
+      "label": "Archive",
       "icon": "delete_outline",
       "uri": "/collection/trash"
     }

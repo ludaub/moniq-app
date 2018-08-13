@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Collection } from './collection';
 
 @Component({
   selector: 'mon-collection-viewer',
@@ -7,12 +8,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['collection-viewer.component.sass']
 })
 export class CollectionViewerComponent {
-  private id: String;
+  private collection: Collection;
 
   constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
+    let id;
     this.activatedRoute.params.subscribe(params => 
-      this.id = params.id);
+      id = params.id);
+    this.collection = new Collection(id, 'Todo');
   }
 }

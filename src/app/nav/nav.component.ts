@@ -11,6 +11,8 @@ import { NavService } from './nav.service';
 })
 export class NavComponent {
   private items: any[];
+  private expanded: boolean;
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
@@ -19,8 +21,13 @@ export class NavComponent {
   constructor(private breakpointObserver: BreakpointObserver, private navService: NavService) {}
   
   ngOnInit() {
+    this.expanded = true;
     this.navService.getItems().subscribe(data => {
       this.items = data.items
     });
+  }
+
+  private switchView() {
+    this.expanded = !this.expanded;
   }
 }

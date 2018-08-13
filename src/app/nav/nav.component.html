@@ -5,19 +5,34 @@
     fixedInViewport="true"
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
-    [opened]="!(isHandset$ | async)">
-    <h1>Moniq</h1>
-    <mat-nav-list *ngFor="let item of items">
-      <a mat-list-item routerLink="{{ item.uri }}" routerLinkActive="mat-list-item--active"><mat-icon>{{ item.icon }}</mat-icon>{{ item.label }}</a>
+    [opened]="!(isHandset$ | async)"
+    [class.expanded]="expanded"
+    [class.reduced]="!expanded">
+    <mat-toolbar class="mon-nav__toolbar">
+      <span class="mon-title">M<span [class.hidden]="!expanded">oniq</span></span>
+    </mat-toolbar>
+    <mat-nav-list class="mon-nav__main">
+      <a mat-list-item class="mon-nav__main__item" *ngFor="let item of items" routerLink="{{ item.uri }}" routerLinkActive="mat-list-item--active"><mat-icon>{{item.icon}}</mat-icon><span>{{item.label}}</span></a>
     </mat-nav-list>
-    <h2>Collections</h2>
-    <mat-nav-list>
-        <a mat-list-item routerLink="#" routerLinkActive="mat-list-item--active"><mat-icon>folder_outline</mat-icon>Collection 1</a>
-        <a mat-list-item routerLink="#" routerLinkActive="mat-list-item--active"><mat-icon>folder_outline</mat-icon>Collection 2</a>
-        <a mat-list-item routerLink="#" routerLinkActive="mat-list-item--active"><mat-icon>folder_outline</mat-icon>Collection 3</a>
-      </mat-nav-list>
+    <hr>
+    <mat-nav-list class="mon-nav__collections">
+      <a mat-list-item class="mon-nav__collections__item" routerLink="#" routerLinkActive="mat-list-item--active" [class.hidden]="!expanded"><mat-icon>folder_outline</mat-icon>Collection 1</a>
+      <a mat-list-item class="mon-nav__collections__item" routerLink="#" routerLinkActive="mat-list-item--active" [class.hidden]="!expanded"><mat-icon>folder_outline</mat-icon>Collection 2</a>
+      <a mat-list-item class="mon-nav__collections__item" routerLink="#" routerLinkActive="mat-list-item--active" [class.hidden]="!expanded"><mat-icon>folder_outline</mat-icon>Collection 3</a>
+    </mat-nav-list>
+    <div class="mon-nav__footer">
+      <hr>
+      <button mat-icon-button class="mon-nav__switch-view-button" (click)="switchView()">
+        <mat-icon *ngIf="expanded">keyboard_arrow_left</mat-icon>
+        <mat-icon *ngIf="!expanded">keyboard_arrow_right</mat-icon>
+      </button>
+    </div>
+    <!--<div class="mon-nav__footer">
+    </div>-->
   </mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav-content
+    [class.expanded]="expanded"
+    [class.reduced]="!expanded">
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -9,7 +9,7 @@ import { CollectionViewerComponent } from './collection/collection-viewer.compon
 import { NavComponent } from './nav/nav.component';
 import { NavService } from './nav/nav.service';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatCardModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -25,6 +25,7 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
+    MatCardModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule

@@ -1,3 +1,35 @@
-<div class="mon-collection__viewer__container">
-  {{ id }}
+<mat-toolbar>
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="drawer.toggle()"
+    *ngIf="isHandset$ | async">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <!--<span>Toolbar</span>-->
+</mat-toolbar>
+
+<div class="mon-collection-viewer__container">
+  <h1>Content</h1>
+  <hr>
 </div>
+
+<!--<div class="mon-collection-viewer__container">
+  <div class="mon-collection-viewer__header">
+    <h1 class="mon-collection-viewer__header__collection-name">{{collection.name}}</h1>
+  </div>
+  <ul class="mon-collection-viewer__list">
+    <li class="mon-collection-viewer__list__item">
+      <a href="#"><mat-icon>insert_drive_file</mat-icon>Document 1</a>
+    </li>
+    <li class="mon-collection-viewer__list__item">
+      <a href="#"><mat-icon>insert_drive_file</mat-icon>Document 2</a>
+    </li>
+    <li class="mon-collection-viewer__list__item">
+      <a href="#"><mat-icon>insert_drive_file</mat-icon>Document 3</a>
+    </li>
+  </ul>
+  <div class="mon-collection-viewer__footer">
+  </div>
+</div>-->

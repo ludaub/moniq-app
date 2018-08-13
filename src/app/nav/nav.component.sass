@@ -1,49 +1,72 @@
 .sidenav-container
-  background-color: rgba(255,255,255,1)
+  background-color: #ffffff
+  color: #212121
   height: 100%
   .sidenav
-    width: 256px
-    //border-right: 1px rgba(239,239,239,1) solid
+    border-right: 1px #eeeeee solid
+    transition: width .3s cubic-bezier(0.4,0.0,0.2,1);
+    &.expanded
+      width: 255px
+    &.reduced
+      overflow-x: hidden // FIXME:
+      width: 57px
     &.mat-drawer
-      background-color: rgba(247,247,247,1)
-      color: rgba(8,8,8,1)
-
-.mat-toolbar.mat-primary
-  position: sticky
-  top: 0
-
-.mat-nav-list
-  padding: 0
-  .mat-icon
-    padding: 0 8px 0 0
-  .mat-list-item
-    color: rgba(8,8,8,1)
-    font-size: 14px
-    height: 42px
-    line-height: 42px
-    &:hover
-      background-color: rgba(239,239,239,1)
-    &--active
-      background-color: rgba(239,239,239,1)
-      font-weight: bold
-
-h1
-  border-bottom: 1px rgba(239,239,239,1) solid
-  font-family: Roboto,"Helvetica Neue",sans-serif
-  font-size: 18px
-  margin: 0
-  padding: 16px
-
-h2
-  border-top: 1px rgba(239,239,239,1) solid
-  color: rgba(0,0,0,.5)
-  font-family: Roboto,"Helvetica Neue",sans-serif
-  font-size: 16px
-  font-weight: bold
-  margin: 0
-  padding: 16px 16px 8px 16px
+      background-color: #fafafa
+      color: #212121
+    .mat-toolbar
+      background-color: #fafafa
+      color: #000000
+      span.mon-title
+        font-family: "Alegreya SC","Helvetica Neue",sans-serif
+        font-size: 26px
+        font-weight: bold
+        margin: 0 0 0 1px
+    .mat-nav-list
+      padding: 0
+      &.mon-nav__main
+        .mon-nav__main__item
+          font-family: "Roboto Condensed",Roboto,"Helvetica Neue",sans-serif
+          height: 42px
+      .mat-icon
+        padding: 0 16px 0 0
+      .mat-list-item
+        color: #212121
+        font-family: "Roboto Condensed",Roboto,"Helvetica Neue",sans-serif
+        font-size: 14px
+        height: 42px
+        white-space: nowrap
+        .mat-list-item-content
+          color: #f00 !important
+        &:hover
+          color: #388e3c
+        &--active
+          color: #388e3c
+    hr
+      background-color: #eeeeee
+      border: none;
+      height: 1px;
+      -webkit-margin-before: 8px;
+      -webkit-margin-after: 8px;
+      -webkit-margin-start: 16px;
+      -webkit-margin-end: 16px;
+    .mon-nav__footer
+      bottom: 0
+      height: 58px
+      position: fixed
+      width: 100%
+    .mon-nav__switch-view-button
+      padding: 0 16px
+      text-align: right
+      width: 100%
+      &:hover
+        color: #388e3c
 
 .mat-sidenav-content
-  position: fixed
-  top: 0px
-  bottom: 0px
+  margin-right: 16px
+  transition: all .3s cubic-bezier(0.4,0.0,0.2,1)
+  &.expanded
+    margin-left: calc(256px + 16px) !important
+    max-width: calc(1170px - 256px - 16px)
+  &.reduced
+    margin-left: calc(58px + 16px) !important
+    max-width: calc(1170px - 58px - 16px)
