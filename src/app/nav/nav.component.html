@@ -1,6 +1,6 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav
-    #drawer
+    #sidenav
     class="sidenav"
     fixedInViewport="true"
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
@@ -31,8 +31,9 @@
     </div>-->
   </mat-sidenav>
   <mat-sidenav-content
-    [class.expanded]="expanded"
-    [class.reduced]="!expanded">
+    [class.expanded-sidenav]="expanded && sidenav.opened"
+    [class.reduced-sidenav]="!expanded && sidenav.opened"
+    [class.closed-sidenav]="!sidenav.opened">
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

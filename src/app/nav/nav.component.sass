@@ -64,9 +64,12 @@
 .mat-sidenav-content
   margin-right: 16px
   transition: all .3s cubic-bezier(0.4,0.0,0.2,1)
-  &.expanded
+  &.expanded-sidenav
     margin-left: calc(256px + 16px) !important
     max-width: calc(1170px - 256px - 16px)
-  &.reduced
+  &.reduced-sidenav
     margin-left: calc(58px + 16px) !important
     max-width: calc(1170px - 58px - 16px)
+  &.closed-sidenav
+    margin-left: 16px !important
+    max-width: calc(1170px - 16px)
