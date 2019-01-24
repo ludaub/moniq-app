@@ -3,16 +3,52 @@
     type="button"
     aria-label="Toggle sidenav"
     mat-icon-button
-    (click)="drawer.toggle()"
+    (click)="sidenav.toggle()"
     *ngIf="isHandset$ | async">
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
-  <!--<span>Toolbar</span>-->
+  <mat-form-field>
+      <button mat-button mat-icon-button mat-icon-only matPrefix>
+          <mat-icon>search</mat-icon>
+        </button>
+    <input matInput type="text" [(ngModel)]="searchTerms">
+    <button mat-button mat-icon-button mat-icon-only matSuffix *ngIf="searchTerms" (click)="searchTerms=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
 </mat-toolbar>
 
 <div class="mon-collection__container">
-  <h1>Content</h1>
-  <hr>
+  <header class="mon-collection__header">
+    <h1>Content</h1>
+    <hr>
+  </header>
+  <section class="mon-collection__list">
+    <article class="mon-collection__item">
+      <a href="#" class="mon-collection__item__title">Item 1</a>
+      <a href="#" class="mon-collection__item__link">item1.com</a>
+      <div class="mon-collection__item__resume">
+        Lorem ipsum
+      </div>
+    </article>
+    <hr>
+    <article class="mon-collection__item">
+      <a href="#" class="mon-collection__item__title">Item 2</a>
+      <a href="#" class="mon-collection__item__link">item2.com</a>
+      <div class="mon-collection__item__resume">
+        Lorem ipsum
+      </div>
+    </article>
+    <hr>
+    <article class="mon-collection__item">
+      <a href="#" class="mon-collection__item__title">Item 3</a>
+      <a href="#" class="mon-collection__item__link">item3.com</a>
+      <div class="mon-collection__item__resume">
+        Lorem ipsum
+      </div>
+    </article>
+    <hr>
+  </section>
 </div>
 
 <!--<div class="mon-collection-viewer__container">
